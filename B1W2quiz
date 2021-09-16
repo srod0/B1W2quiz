@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 
 
 
-N = list(range(1, 26))
 # Fibonacci series
 fiblist = [0,1]
 for i in range(26):
@@ -20,10 +19,12 @@ for i in range(26):
 gratio=[fiblist[i] / float(fiblist[i-1]) for i in range(2,len(fiblist))]
 #print (gratio)
 #print (N)
+n = len(gratio)
+n_val = np.arange(n)
 plt.title("Comparing Ratios of Fibonacci Numbers to Find the Golden Ratio")
 plt.xlabel("N value")
 plt.ylabel("Golden Ratio Value")
-plt.plot(gratio)
+plt.plot(n_val, gratio)
 
 # after about seven values I think that it converges to the true value 
 # of the golden ratio I think that because looking at the graph I don't see any
